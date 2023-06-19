@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "c:\\Strawberry\\c\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${workspaceFolder}/*.h",
+                "${workspaceFolder}/TestBuilder.c",
+				"${workspaceFolder}/TMDQueue.c",
+				"${workspaceFolder}/HistogramDisplay.c",
+                "${workspaceFolder}/WaveformDisplay.c",
+				"${workspaceFolder}/ECG_Module.c",
+				"${workspaceFolder}/TimeMarkedData.c",			
+				"${workspaceFolder}/NotificationHandle.c",		
+				"${workspaceFolder}/main.c",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: c:\\Strawberry\\c\\bin\\gcc.exe"
+		}
+	]
+}

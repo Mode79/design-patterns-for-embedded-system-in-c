@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "histogramdisplay.h": "c",
+        "ecgpkg.h": "c",
+        "ecg_module.h": "c",
+        "tmdqueue.h": "c",
+        "RTU.C": "cpp",
+        "timemarkeddata.h": "c"
+    }
+}

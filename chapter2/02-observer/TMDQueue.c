@@ -35,7 +35,6 @@ void TMDQueue_insert(TMDQueue *const me, const TimeMarkedData *tmd)
     */
     printf("Inderting at: %d    Data #: %d", me->u32Head, tmd->timeInterval);
     me->buffer[me->u32Head].dataValue    = tmd->dataValue;
-    me->buffer[me->u32Head].itsTMDQueue  = tmd->itsTMDQueue;
     me->buffer[me->u32Head].timeInterval = tmd->timeInterval;
     me->u32Head             = TMDQueue_getNextIndex(me, me->u32Head);
     if(me->u32Size < QUEUE_SIZE)
@@ -198,7 +197,6 @@ static void initRelations(TMDQueue *const me)
         while(iter < QUEUE_SIZE)
         {
             TimeMarkedData_Init(&((me->buffer)[iter]));
-            TimeMarkedData_setItsTMDQueue(&((me->buffer)[iter]), me);
             iter++;
         }
     }
